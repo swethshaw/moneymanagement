@@ -2,13 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.0 , max-scale=1.0">
+    <meta name="description" content="Feedback form">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta http-equiv="refresh" content="300">
     <title>Payout Limit</title>
     <link rel="stylesheet" href="login.css">
     <link rel="icon" type="image/icon" href="img/snas-logo.png"/>
 </head>
 <body>
-    
+    <div class="logo">
+        <a href="index.html"><img src="img/snas-logo.png" alt="no image" id="logoicon"></a>
+    </div>
+    <div class="formarea">
+        <center>
+            <table>
+                <form onsubmit="submit()" method="post" name="myform">
+                    <tr>
+                        <td colspan="4"><p>Sign in</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="cId">Customer Id: </label>
+                        </td>
+                        <td colspan="2">
+                            <input type="tel" placeholder="Id" class="int" id="cId" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">Email: </label>
+                        </td>
+                        <td colspan="2">
+                            <input type="email" placeholder="Email address" class="int" id="email" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Pass">Password: </label>
+                        </td>
+                        <td colspan="2">
+                            <input type="password" placeholder="password" class="int" id="Pass" required/>
+                        </td>
+                        <td>
+                            <input type="button" class="btn-show" value="Show"id="s"onclick="show()"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="b">
+                            <button type="reset" value="reset" class="btn">reset</button>
+                        </td>
+                        <td colspan="2" class="b">
+                            <button type="submit"  class="btn">submit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="reg">
+                            <label>Need a Account: <a href="register.html">Register Now</a></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="reg">
+                            <label><a href="#" class="for">Forget Password</a></label>
+                        </td>
+                    </tr>
+                </form>
+            </table>
+        </center>
+    </div>
     <script src="login.js"></script>
 </body>
 </html>

@@ -3,13 +3,15 @@ body{
     background-color: rgba(0, 0, 0, 0.811);
 }
 #logoicon{
-    height: 20px;
+    height: 30px;
     cursor: pointer;
 }
 .formarea{
     /* display: flex;
     justify-content: center; */
-    margin-top: 75px;
+    margin-top: 150px;
+    /* display: inline;
+    vertical-align: middle; */
 }
 table{
     border: 10px solid red;
