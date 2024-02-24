@@ -61,7 +61,7 @@ textarea{
     font-family: 'Times New Roman', Times, serif;
 /*     padding: 10px; */
     border-radius: 10px;
-    text-transform: inherit;
+/*     text-transform: inherit; */
 }
 #s{
     text-align: center;
