@@ -22,12 +22,12 @@ td,tr{
 }
 h1{ 
     margin-top: 10px;
-    font-size: 100px;  
+    font-size: 90px;  
     color:darkblue;
     text-align: center;
 }
 label{
-    font-size:40px;
+    font-size:38px;
     color:darkblue;
     text-transform: capitalize;
     font-weight: 900;
