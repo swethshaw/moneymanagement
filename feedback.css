@@ -1,6 +1,6 @@
 body{
     margin: 10px;
-    background-color: rgba(0, 0, 0, 0.811);
+    background-color: lightblue;
 }
 #logoicon{
     height: 30px;
@@ -14,7 +14,7 @@ body{
     vertical-align: middle; */
 }
 table{
-    border: 10px solid red;
+    border: 10px solid darkgreen;
     padding: 40px;
 }
 td,tr{
@@ -23,12 +23,12 @@ td,tr{
 h1{ 
     margin-top: 10px;
     font-size: 80px;  
-    color:white;
+    color:darkblue;
     text-align: center;
 }
 label{
     font-size:30px;
-    color:white;
+    color:darkblue;
     text-transform: capitalize;
     font-weight: 900;
 }
