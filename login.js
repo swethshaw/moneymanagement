@@ -9,5 +9,5 @@ function show(){
     }
 }
 function submit(){
-    window.open("https://www.w3schools.com");
+  return true;
 }

@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=0.0 , max-scale=1.0">
-    <meta name="description" content="Feedback form">
+    <meta name="viewport" content="width=device-width, initial-scale=0.3">
+    <meta name="description" content="login form">
     <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta http-equiv="refresh" content="300">
+    <meta http-equiv="refresh" content="600">
     <title>Payout Limit</title>
     <link rel="stylesheet" href="login.css">
     <link rel="icon" type="image/icon" href="img/snas-logo.png"/>
@@ -18,9 +18,12 @@
     <div class="formarea">
         <center>
             <table>
-                <form onsubmit="submit()" method="post" name="myform">
+                <form action="index.html" onsubmit="return submit()" method="get" name="myform">
                     <tr>
-                        <td colspan="4"><p>Sign in</p></td>
+                        <th colspan="4" class="p">Sign in</th>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="span"><span id="invalid">* invalid</span></td>
                     </tr>
                     <tr>
                         <td>
@@ -35,7 +38,7 @@
                             <label for="email">Email: </label>
                         </td>
                         <td colspan="2">
-                            <input type="email" placeholder="Email address" class="int" id="email" required/>
+                            <input type="email" placeholder="Email address" class="emaili" id="email" required/>
                         </td>
                     </tr>
                     <tr>
@@ -53,7 +56,7 @@
                         <td colspan="2" class="b">
                             <button type="reset" value="reset" class="btn">reset</button>
                         </td>
-                        <td colspan="2" class="b">
+                        <td colspan="2">
                             <button type="submit"  class="btn">submit</button>
                         </td>
                     </tr>

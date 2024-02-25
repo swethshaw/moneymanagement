@@ -78,6 +78,7 @@ textarea{
     border-color:white;
     text-transform: uppercase;
     /* text-align: center; */
+    cursor: pointer;
 }
 .submit:hover{
     
