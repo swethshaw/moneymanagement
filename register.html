@@ -5,6 +5,10 @@
     <meta name="description" content="login form">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta http-equiv="refresh" content="600">
+    <meta name='owner' content='snas'>
+    <meta name='copyright' content='snas'>
+    <meta name='MobileOptimized' content='320'>
+    <meta http-equiv='Pragma' content='no-cache'>
     <title>Payout register</title>
     <link rel="stylesheet" href="signup.css ">
     <link rel="icon" type="image/icon" href="img/snas-logo.png"/>
@@ -26,7 +30,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for="fname" id="fname">Name:</label>
+                            <label for="fname" id="fname">full Name:</label>
                         </td>
                         <td colspan="3">
                             <input type="text" id="fname" class="int" required/>
@@ -63,6 +67,52 @@
                     </tr>
                     <tr>
                         <td>
+                            <label for="state">State:</label>
+                        </td>
+                        <td colspan="3">
+                            <select id="state" class="state">
+                                <option value="state">state</option>
+                                <option value="Tripura">Tripura</option>
+                                <option>Andhra Pradesh</option>
+                                <option>Arunachal Pradesh</option>
+                                <option>Assam</option>
+                                <option>Bihar</option>
+                                <option>Chhattisgarh</option>
+                                <option>Goa</option>
+                                <option>Gujarat</option>
+                                <option>Haryana</option>
+                                <option>Himachal Pradesh</option>
+                                <option>Jharkhand</option>
+                                <option>Karnataka</option>
+                                <option>Kerala</option>
+                                <option>Madhya Pradesh</option>
+                                <option>Maharashtra</option>
+                                <option>Manipur</option>
+                                <option>Meghalaya</option>
+                                <option>Mizoram</option>
+                                <option>Nagaland</option>
+                                <option>Odisha</option>
+                                <option>Punjab</option>
+                                <option>Rajasthan</option>
+                                <option>Sikkim</option>
+                                <option>Tamil Nadu</option>
+                                <option>Telangana</option>
+                                <option>Uttarakhand</option>
+                                <option>Uttar Pradesh</option>
+                                <option>West Bengal</option>
+                                <option>Andaman and Nicobar</option>
+                                <option>Jammu & Kashmir</option>
+                                <option>Ladakh</option>
+                                <option>Lakshadweep</option>
+                                <option>Chandigarh</option>
+                                <option>Dadra</option>
+                                <option>Delhi</option>
+                                <option>Puducherry</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             <label for="email">email address </label>
                         </td>
                         <td colspan="3">
@@ -82,10 +132,7 @@
                             <label for="cp">Confirm password</label>
                         </td>
                         <td colspan="3">
-                            <input type="password" id="cp" class="int" required/>
-                        </td>
-                        <td>
-                            <input type="button" value="Show" class="sh" id="s" onclick="show()">
+                            <input type="password" id="cp" class="con" required/><input type="button" value="Show" class="sh" id="s" onclick="show()">
                         </td>
                     </tr>
                     <tr>

@@ -4,7 +4,12 @@ function validateform(){
     // var em = document.forms["myform"]["email"].value;
     var pass = document.forms["myform"]["pass"].value;
     var cp = document.forms["myform"]["cp"].value;
+    var st=document.forms["myform"]["state"].value;
     var error=pass.localeCompare(cp);
+    if(st=='state'){
+        document.getElementById("formerror").innerHTML= "* Select the state you belong to";
+        return false;
+    }
     if(name.length<5){
         document.getElementById("formerror").innerHTML= "* The length of name should be more than 5 letter";
         return false;

@@ -65,6 +65,28 @@ label{
     text-transform: capitalize;
     color: grey;
 }
+.con{
+    height: 38px;
+    width: 79%;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+    text-transform: capitalize;
+    padding: 5px;
+}
+.state{
+    width: 103%;
+    height: 50px;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+.state::-webkit-scrollbar{
+    scrollbar-width: none;
+}
 .btn{
     font-size: xx-large;
     margin-top: 10px;
@@ -85,9 +107,13 @@ label{
     transform: scale(1.1);
 }
 .sh{
-    width: 50px;
-    height: 40px;
+    height: 53px;
+    width: 18%;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
     border-radius: 15px;
+    text-transform: capitalize;
+    padding: 5px;
 }
 #sub{
     text-align: end;
