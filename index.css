@@ -1,0 +1,16 @@
+body{
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.811);
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+}
+#logoicon{
+    height: 30px;
+    cursor: pointer;
+}
+a{
+    color: lavender;
+    font-size: 30px;
+}
