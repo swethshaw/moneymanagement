@@ -18,7 +18,7 @@
         <a href="index.html"><img src="img/snas-logo.png" alt="no image" id="logoicon"></a>
     </div>
     <div class="formarea">
-        <form action="login.html" name="myform" method="get" onsubmit="return validateform()">
+        <form action="login.html" name="myform" method="post" onsubmit="return validateform()">
                 <table>
                     <tr>
                         <th colspan="4">
@@ -132,15 +132,20 @@
                             <label for="cp">Confirm password</label>
                         </td>
                         <td colspan="3">
-                            <input type="password" id="cp" class="con" required/><input type="button" value="Show" class="sh" id="s" onclick="show()">
+                            <div class="eye">
+                            <input type="password" id="cp" class="con" required/><img src="img/bulbo.png" alt="show" class="imgb" onclick="show()">
+                            <!-- <input type="button" value="Show" class="sh" id="s" onclick="show()"> -->
+                            </div>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" id="sub">
-                            <button type="reset" class="btn" >reset</button>
-                        </td>
-                        <td colspan="2" id="res">
+                        <td colspan="4" id="res">
                             <button type="submit" class="btn" >Submit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" id="sub">
+                            <button type="reset" class="btn" >reset</button>
                         </td>
                     </tr>
                 </table>

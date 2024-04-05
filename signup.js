@@ -41,12 +41,15 @@ function validateform(){
 }
 function show(){
     var x=document.getElementById("cp");
+    var eyeIcon = document.querySelector(".imgb");
     if(x.type==="password"){
         x.type="text";
-        document.getElementById('s').value='Hide';
+        eyeIcon.src="img/bulbl.png";
+        // document.getElementById('s').value='Hide';
     }
     else{
         x.type="password";
-        document.getElementById('s').value='Show';
+        eyeIcon.src="img/bulbo.png";
+        // document.getElementById('s').value='Show';
     }
 }
