@@ -18,7 +18,7 @@
     <div class="formarea">
         <center>
             <table>
-                <form action="index.html" onsubmit="return submit()" method="get" name="myform">
+                <form action="index.html" onsubmit="return submit()" method="post" name="myform">
                     <tr>
                         <th colspan="4" class="p">Sign in</th>
                     </tr>
@@ -53,13 +53,16 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" class="b">
-                            <button type="reset" value="reset" class="btn">reset</button>
-                        </td>
-                        <td colspan="2">
+                        <td colspan="4">
                             <button type="submit"  class="btn">submit</button>
                         </td>
                     </tr>
+                    <tr>
+                        <td colspan="4" class="b">
+                            <button type="reset" value="reset" class="btn">reset</button>
+                        </td>
+                    </tr>
+                    
                     <tr>
                         <td colspan="4" class="reg">
                             <label>Need a Account: <a href="register.html">Register Now</a></label>
