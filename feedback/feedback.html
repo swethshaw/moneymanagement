@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.3">
+    <meta name="description" content="feedback form">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta http-equiv="refresh" content="600">
+    <title>payout feedback</title>
+    <link rel="stylesheet" href="feedback.css">
+    <link rel="icon" type="image/icon" href="../img/snas-logo.png"/>
+</head>
+
+<body>
+    <div class="logo">
+        <a href="../../index.html"><img src="../img/snas-logo.png" alt="no image" id="logoicon"></a>
+    </div>
+    <div class="formarea">
+        <center>
+            <table>
+                <form method="post" action="../../index.html" onsubmit="done()" name="feed">
+                    <tr>
+                        <td colspan="4">
+                            <h1>FeedBack</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">
+                            <label for="f">Name: </label>
+                        </td>
+                        <td colspan="3">
+                            <input type="text" class="fname" id="f" placeholder="full name" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">
+                            <label class="email" for="e">Email ID:</label>
+                        </td>
+                        <td colspan="3">
+                            <input type="email" placeholder="Email Address" class="emaili" id="e" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <Label class="ra"> Experience:</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="Feedback" class="ra" id="b" required /><label for="b">Not
+                                Satisfied</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="Feedback" class="ra" id="a" required /><label for="a">Good</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="Feedback" class="ra" id="el" required /><label
+                                for="el">Excellent</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Remark: </label>
+                        </td>
+                        <td colspan="3">
+                            <textarea minlength="10" maxlength="1000" placeholder="Enter The Remark"
+                                required></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" id="s">
+                            <button type="submit" class="submit">Submit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" id="s">
+                            <button type="reset" class="submit">Reset</button>
+                        </td>
+                    </tr>
+
+                </form>
+            </table>
+        </center>
+    </div>
+    <script src="feedback.js">
+    </script>
+</body>
+
+</html>

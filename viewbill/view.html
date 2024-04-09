@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.3" />
+    <meta name="description" content="viewbill page" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <title>Money view</title>
+    <!-- <meta http-equiv="refresh" content="2"> -->
+    <link rel="stylesheet" href="view.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="icon" type="image/icon" href="../img/snas-logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="container-fluid">
+    <h1 class="h1">View History</h1>
+        <div class="row">
+            <div class="col-6">
+                <label>customer Id: </label><label class="id">00</label>
+            </div>
+            <div class="col-6">
+                <label>Name: </label><label class="name">sweth shaw</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label>ph no. : </label><label class="number">0123456789</label>
+            </div>
+            <div class="col-6">
+                <label>type: </label><label class="type">customer</label>
+            </div>
+        </div>
+        <div class="row" id="input">
+            <i class="fa fa-calendar" aria-hidden="true"></i><select name="date" id="">
+                <option value="today">today</option>
+                <option value="yesterday">yesterday</option>
+                <option value="7">last 7 days</option>
+                <option value="custom">custom date</option>
+            </select>
+        </div>
+        <div class="row" id="input">
+        <div id="cus">
+            <input type="date" id="first"><input type="date" id="second">
+        </div>
+        </div>
+        <div class="row">
+            <label>Total amount: </label><label class="bal">2000</label>
+        </div>
+        <div class="row">
+            <label>Transactions: </label><label class="trans">1</label>
+        </div>
+    </div>
+    <div class="container-fluid" id="Transactions">
+        <div class="row">
+            <label>date</label><label class="date">8 apr</label>
+            <label>time</label><label class="time">8.0.0</label>
+            <label>amount</label><label class="amount">2000</label>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="row">
+            <span id="no">no more transactions</span>
+        </div>
+    </div>
+</body>
+
+</html>

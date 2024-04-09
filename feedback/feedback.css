@@ -1,0 +1,84 @@
+*{
+    margin: 2px;
+}
+body{
+    margin: 10px;
+    /* background-color: lightblue; */
+}
+#logoicon{
+    height: 30px;
+    cursor: pointer;
+}
+.formarea{
+    margin-top: 5vh;
+}
+table{
+    border: 10px solid black;
+    padding: 40px;
+    border-radius: 15px;
+    background-color: lightskyblue;
+}
+td,tr{
+    padding: 10px;
+}
+h1{ 
+    margin-top: 10px;
+    font-size: 90px;  
+    color:darkblue;
+    text-align: center;
+    margin-bottom: 10px;
+}
+label{
+    font-size:38px;
+    color:darkblue;
+    text-transform: capitalize;
+    font-weight: 900;
+}
+.fname{
+    height: 38px;
+    width: 100%;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+    text-transform: capitalize;
+}
+.emaili{
+    height: 38px;
+    width: 100%;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+}
+.ra{
+    width: 30px;
+    height: 20px;
+}
+textarea{
+    height:100px ;
+    width:100%;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+}
+#s{
+    text-align: center;
+}
+.submit{
+    font-size: xx-large;
+    border-radius: 32px;
+    padding: 10px;
+    background-color: rgb(46, 212, 12);
+    color:black;
+    border-color:white;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
+}
+.submit:hover{
+    
+    color:rgba(255, 255, 255, 0.816);
+    background-color: gold;
+    font-weight: bolder;
+    transform: scale(1.1);
+}
+
