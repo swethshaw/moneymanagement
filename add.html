@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.3" />
+    <meta name="description" content="add page" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <title>Money Add</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="icon" type="image/icon" href="img/snas-logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script
+        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "1431902a-f17c-4925-b7bf-3bc5e3401762"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
+    <style>
+        body {
+            background-color: lightgray;
+            padding: 50px;
+            margin: 5%;
+        }
+
+        #body {
+            background-color: white;
+            border: 1px solid gray;
+            padding: 30px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #header {
+            padding: 20px;
+        }
+
+        hr {
+            border: 1px solid black;
+        }
+
+        #logoicon {
+            height: 40px;
+            cursor: pointer;
+        }
+
+        #d {
+            text-align: end;
+            padding-right: 40px;
+
+        }
+
+        #date {
+            font-weight: 600;
+            font-size: 28px;
+        }
+
+        #date-font {
+            font-weight: 700;
+            font-size: 28px;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 1000;
+            font-size: 60px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        #bill {
+            font-size: 30px;
+            font-weight: 700;
+            margin-left: 30px;
+        }
+
+        #address {
+            background-color: lightgray;
+            margin-bottom: 15px;
+            font-size: 28px;
+            margin-left: 20px;
+            border-radius: 15px;
+            width: 90%;
+            padding: 5px;
+        }
+
+        #font {
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        #item {
+            text-align: center;
+        }
+
+        #item input {
+            background-color: lightgray;
+            margin-bottom: 15px;
+            font-size: 28px;
+            margin-left: 20px;
+            border-radius: 10px;
+            width: 90%;
+            padding: 5px;
+        }
+
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0px;
+        }
+
+        #price {
+            text-align: end;
+        }
+
+        #ru {
+            font-size: 40px;
+            position: absolute;
+            top: 45%;
+            left: 55px;
+            transform: translateY(-50%);
+        }
+
+        #item button {
+            background-color: lightgray;
+            border-radius: 15px;
+            margin-left: 20px;
+        }
+
+        #dustbin {
+            font-size: 35px;
+            padding: 5px;
+            background-color: lightgray;
+            color: red;
+        }
+
+        #next button {
+            text-transform: capitalize;
+            font-size: 25px;
+            margin-left: 45%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        #calcu button {
+            text-transform: capitalize;
+            font-size: 30px;
+            margin-left: 45%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        #it {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        #it input {
+            background-color: lightgray;
+            margin-bottom: 15px;
+            font-size: 28px;
+            margin-left: 20px;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        #it-d {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+            margin-left: -20px;
+        }
+
+        #it-d input {
+            background-color: lightgray;
+            margin-bottom: 15px;
+            font-size: 28px;
+            margin-left: 20px;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        #per {
+            font-size: 28px;
+        }
+
+        #rupee {
+            font-size: 30px;
+            padding: 9px;
+        }
+
+        #rupee-acc {
+            text-align: end;
+        }
+
+        textarea {
+            height: 80px;
+            width: 100%;
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid lightgray;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        #print {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        #print button {
+            font-size: 25px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        @media print {
+            button {
+                display: none !important;
+            }
+
+            input {
+                border: 0px;
+            }
+
+            hr {
+                display: none !important;
+            }
+
+            #hide {
+                font-size: 0px;
+            }
+
+            body {
+                padding: 0px;
+            }
+
+            #it {
+                margin-top: 20px;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            #it input {
+                background-color: lightgray;
+                margin-bottom: 5px;
+                font-size: 28px;
+                /* margin-left: 20px; */
+                /* border-radius: 10px; */
+                /* padding: 5px; */
+            }
+
+            #it-d {
+                margin-top: 20px;
+                margin-bottom: 10px;
+                /* text-align: center; */
+                /* margin-left: -20px; */
+            }
+
+            #it-d input {
+                background-color: lightgray;
+                margin-bottom: 15px;
+                font-size: 28px;
+                /* margin-left: 20px; */
+                /* border-radius: 10px; */
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid" id="body">
+        <div class="row" id="header">
+            <div class="col-2">
+                <a href="index.html"><img src="img/snas-logo.png" alt="no image" id="logoicon"></a>
+            </div>
+            <div class="col-10" id="d">
+                <label for="date" id="date-font">Date:&nbsp;</label>
+                <label id="date"></label>
+            </div>
+        </div>
+        <hr>
+        <h1>Invoice</h1>
+        <div class="row">
+            <div class="col-6" id="bill-con">
+                <label id="bill">
+                    Bill to:
+                </label><br>
+                <input type="text" placeholder="Name of client" id="address"><br>
+                <input type="text" placeholder="Address of the client" id="address"><br>
+                <input type="number" minlength="10" placeholder="Contact details" id="address">
+            </div>
+            <div class="col-6" id="bill-con">
+                <label id="bill">
+                    Bill from:
+                </label><br>
+                <input type="text" placeholder="Name of lender" id="address"><br>
+                <input type="text" placeholder="Address of the lender" id="address"><br>
+                <input type="number" minlength="10" placeholder="Contact details" id="address">
+            </div>
+            <br>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-7" id="font">
+                <label>
+                    ITEM
+                </label>
+            </div>
+            <div class="col-1" id="font">
+                <label id="q">
+                    QTY
+                </label>
+            </div>
+            <div class="col-2" id="font">
+                <label id="r">
+                    PRICE/RATE
+                </label>
+            </div>
+            <div class="col-1" id="font">
+                <label id="hide">
+                    ACTION
+                </label>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <div id="item-area">
+                <div class="row" id="addelement">
+                    <div class="col-7" id="item">
+                        <input type="text" placeholder="Enter the name of the item">
+                    </div>
+                    <div class="col-1" id="item">
+                        <input type="number" placeholder="0" class="qty" id="price">
+                    </div>
+                    <div class="col-2" id="item">
+                        <i class="fa fa-inr" id="ru"></i><input type="number" placeholder="0.0" class="rate" id="price">
+                    </div>
+                    <div class="col-1" id="item">
+                        <button type="button" onclick="removeParentDiv(this)" id="delete"><i class="fa fa-trash"
+                                id="dustbin" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="next">
+                <button type="button" class="btn btn-primary" id="addnew">add item</button>
+            </div>
+        </div>
+        <hr>
+        <div class="row" id="di">
+            <div class="col-6" id="it">
+                <label id="date-font">Tax Rate: </label>
+                <input type="number" class="tax" placeholder="0.0" id="price">
+                <i class="fa fa-percent" aria-hidden="true" id="per"></i>
+            </div>
+            <div class="col-6" id="it-d">
+                <label id="date-font">Discount Rate: </label>
+                <input type="number" class="discount" placeholder="0.0" id="price">
+                <i class="fa fa-percent" aria-hidden="true" id="per"></i>
+            </div>
+        </div>
+        <hr>
+        <div class="row" id="calcu">
+            <button type="button" class="btn btn-primary" id="cal">calculate</button>
+        </div>
+
+        <hr>
+        <div class="row">
+            <div class="col-5"></div>
+            <div class="col-3">
+                <label id="date-font">
+                    Sub-total:
+                </label>
+                <br />
+                <label id="date-font">
+                    Discount(<label class="diso" id="date-font">0</label>%):
+                </label><br />
+                <label id="date-font">
+                    Tax(<label class="taxo" id="date-font">0</label>%):
+                </label>
+            </div>
+            <div class="col-2" id="rupee-acc">
+                <i class="fa fa-inr" id="rupee"></i>
+                <br />
+                <i class="fa fa-inr" id="rupee"></i>
+                <br />
+                <i class="fa fa-inr" id="rupee"></i>
+            </div>
+            <div class="col-2">
+                <label class="subout" id="date-font">0</label><br />
+                <label class="disout" id="date-font">0</label><br />
+                <label class="taxout" id="date-font">0</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5"></div>
+            <div class="col-7">
+                <hr>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-5"></div>
+            <div class="col-3">
+                <label id="date-font">
+                    Total:
+                </label>
+            </div>
+            <div class="col-2" id="rupee-acc">
+                <i class="fa fa-inr" id="rupee"></i>
+            </div>
+            <div class="col-2"><label class="grandout" id="date-font">0</label></div>
+        </div>
+        <hr>
+        <div>
+            <label id="date-font">Notes:</label>
+            <br>
+            <textarea placeholder="Thanks for the Business" id="text-box" cols="30" rows="10"></textarea>
+        </div>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-2" id="print">
+                <button class="btn btn-primary" id="print-btn">Print</button>
+            </div>
+            <div class="col-2" id="print">
+                <button class="btn btn-primary" id="save-btn">Save</button>
+            </div>
+            <div class="col-2" id="print">
+                <a href="payment.html"><button class="btn btn-primary" id="payment-btn">Payment</button></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var grandAmount = 0;
+        var tax = 0;
+        var discount = 0;
+        var t = 0;
+        var d = 0;
+        var now = new Date();
+        var datetime = now.toLocaleDateString();
+        document.getElementById('date').innerHTML = datetime;
+        function removeParentDiv(button) {
+            var parentDiv = button.parentNode;
+            var granddiv = parentDiv.parentNode;
+            granddiv.parentNode.removeChild(granddiv);
+            updateTotals();
+        }
+        $(document).ready(function () {
+            $("#addnew").click(function () {
+                var newRow = `
+            <div class="row" id="addelement">
+                <div class="col-7" id="item">
+                    <input type="text" placeholder="Enter the name of the item">
+                </div>
+                <div class="col-1" id="item">
+                    <input type="number" placeholder="0" class="qty" id="price">
+                </div>
+                <div class="col-2" id="item">
+                    <i class="fa fa-inr" id="ru"></i><input type="number" placeholder="0.0" class="rate" id="price">
+                </div>
+                <div class="col-1" id="item">
+                    <button type="button" onclick="removeParentDiv(this)" id="delete"><i class="fa fa-trash"
+                            id="dustbin" aria-hidden="true"></i></button>
+                </div>
+            </div>`
+                $("#item-area").append(newRow);
+                updateTotals();
+            });
+            $("#addelement").on("input", ".qty, .rate", function () {
+                updateTotals();
+            });
+        });
+        function updateTotals() {
+            var totalQty = 0;
+            var totalRate = 0;
+            var totalAmount = 0;
+            $(".row").each(function () {
+                var qty = parseInt($(this).find(".qty").val()) || 0;
+                var rate = parseFloat($(this).find(".rate").val()) || 0;
+                var amount = qty * rate;
+
+                totalQty += qty;
+                totalRate += rate;
+                totalAmount += amount;
+            });
+            $(".discount").on("input", function () {
+                d = parseInt($(".discount").val()) || 0;
+            });
+            $(".tax").on("input", function () {
+                t = parseInt($(".tax").val()) || 0;
+            });
+            function printall() {
+                tax = (totalAmount * t) / 100;
+                discount = (totalAmount * d) / 100;
+                grandAmount = totalAmount + tax - discount;
+                var tQty = totalQty.toString();
+                var tRate = totalRate.toString();
+                var tAmount = totalAmount.toString();
+                var ta = tax.toString();
+                var dit = discount.toString();
+                var taxe = t.toString();
+                var disc = d.toString();
+                var g = grandAmount.toString();
+                $(".taxo").text(taxe);
+                $(".diso").text(disc.toString());
+                $(".taxout").text(ta);
+                $(".disout").text(dit);
+                $(".subout").text(tAmount);
+                $(".grandout").text(g);
+            }
+            $("#cal").mouseenter(function () {
+                updateTotals();
+            });
+            $("#cal").on("click", function () {
+                updateTotals();
+                printall();
+            });
+        }
+        function printInvoice() {
+            window.print();
+        }
+        $(document).ready(function () {
+            $("#print-btn").click(function () {
+                printInvoice();
+            });
+            function saveInvoice() {
+                alert("Invoice saved successfully!");
+            }
+            $("#save-btn").click(function () {
+                saveInvoice();
+            });
+        });
+    </script>
+</body>
+
+</html>

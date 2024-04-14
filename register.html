@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=0.3">
     <meta name="description" content="login form">
@@ -7,150 +8,407 @@
     <meta http-equiv="refresh" content="600">
     <meta name='owner' content='snas'>
     <meta name='copyright' content='snas'>
-    <meta name='MobileOptimized' content='320'>
     <meta http-equiv='Pragma' content='no-cache'>
-    <title>Payout register</title>
-    <link rel="stylesheet" href="signup.css ">
-    <link rel="icon" type="image/icon" href="img/snas-logo.png"/>
+    <title>dineroSR register</title>
+    <link rel="icon" type="image/icon" href="img/snas-logo.png" />
+    <script
+        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "1431902a-f17c-4925-b7bf-3bc5e3401762"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
+    <style>
+        body {
+            margin: 10px;
+            background-color: #1995AD;
+        }
+
+        #logoicon {
+            height: 45px;
+            cursor: pointer;
+        }
+        input,select{
+            background-color: #1995AD;
+        }
+        .formarea {
+            margin: 100px;
+            display: flex;
+            justify-content: center;
+        }
+        #register{
+            background-color: #A1D6E2;
+        }
+        table {
+            border: 10px solid blue;
+            padding: 40px;
+        }
+
+        tr,
+        td {
+            padding: 10px;
+        }
+
+        th {
+            font-size: 70px;
+            font-weight: bolder;
+            text-align: center;
+            text-transform: capitalize;
+            color: black;
+            padding-bottom: 70px;
+        }
+
+        .span {
+            color: red;
+            font-size: 25px;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        label {
+            font-size: 38px;
+            color: black;
+            text-transform: capitalize;
+            font-weight: 900;
+        }
+
+        .int {
+            height: 38px;
+            width: 100%;
+            font-size: 35px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 15px;
+            text-transform: capitalize;
+            padding: 5px;
+            /* margin-left: 10px; */
+        }
+
+        .emaili {
+            height: 38px;
+            width: 100%;
+            font-size: 35px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 15px;
+            /* text-transform: capitalize; */
+            padding: 5px;
+        }
+        .con {
+            height: 38px;
+            width: 108%;
+            font-size: 35px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 15px;
+            padding: 5px;
+        }
+
+        .state {
+            width: 103%;
+            height: 50px;
+            border-radius: 15px;
+            padding: 5px;
+            font-size: 30px;
+            text-align: center;
+            text-transform: capitalize;
+            font-weight: 700;
+
+        }
+
+        .state::-webkit-scrollbar {
+            scrollbar-width: none;
+        }
+
+        .btn {
+            font-size: xx-large;
+            margin-top: 10px;
+            border-radius: 32px;
+            padding: 10px;
+            background-color: rgb(46, 212, 12);
+            color: black;
+            border-color: white;
+            text-transform: uppercase;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn:hover {
+
+            color: rgba(255, 255, 255, 0.816);
+            background-color: gold;
+            font-weight: bolder;
+            transform: scale(1.1);
+        }
+        .eye {
+            position: relative;
+            display: inline-block;
+        }
+
+        .imgb {
+            width: 45px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            right: -40px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        #sub {
+            text-align: end;
+        }
+
+        #res {
+            text-align: center;
+        }
+
+        .radio {
+            width: 30px;
+            height: 20px;
+
+        }
+    </style>
 </head>
 <body>
     <div class="logo">
         <a href="index.html"><img src="img/snas-logo.png" alt="no image" id="logoicon"></a>
     </div>
     <div class="formarea">
-        <form action="login.html" name="myform" method="post" onsubmit="return validateform()">
-                <table>
-                    <tr>
-                        <th colspan="4">
-                            Sign up
-                        </th>
-                    </tr>
-                    <tr>
-                        <td colspan="4" class="span"><span id="formerror"></span></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="fname" id="fname">full Name:</label>
-                        </td>
-                        <td colspan="3">
-                            <input type="text" id="fname" class="int" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="gen">Gender:</label>
-                        </td>
-                        <td>
-                            <input type="radio" id="male" name="a" class="radio" required/>
-                            <label for="male">male</label>
-                        </td>
-                        <td>
-                            <input type="radio" id="female" name="a" class="radio" required/>
-                            <label for="female">female</label>
-                        </td>
-                        <td>
-                            <input type="radio" id="special" name="a" class="radio" required/>
-                            <label for="special">special</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="con">Contact no.</label>
-                        </td>
-                        <td colspan="3">
-                            <input type="tel" id="con" class="int" maxlength="10" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="address">Address:</label></td>
-                        <td colspan="3"><input type="text" id="address" class="int" required/></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="state">State:</label>
-                        </td>
-                        <td colspan="3">
-                            <select id="state" class="state">
-                                <option value="state">state</option>
-                                <option value="Tripura">Tripura</option>
-                                <option>Andhra Pradesh</option>
-                                <option>Arunachal Pradesh</option>
-                                <option>Assam</option>
-                                <option>Bihar</option>
-                                <option>Chhattisgarh</option>
-                                <option>Goa</option>
-                                <option>Gujarat</option>
-                                <option>Haryana</option>
-                                <option>Himachal Pradesh</option>
-                                <option>Jharkhand</option>
-                                <option>Karnataka</option>
-                                <option>Kerala</option>
-                                <option>Madhya Pradesh</option>
-                                <option>Maharashtra</option>
-                                <option>Manipur</option>
-                                <option>Meghalaya</option>
-                                <option>Mizoram</option>
-                                <option>Nagaland</option>
-                                <option>Odisha</option>
-                                <option>Punjab</option>
-                                <option>Rajasthan</option>
-                                <option>Sikkim</option>
-                                <option>Tamil Nadu</option>
-                                <option>Telangana</option>
-                                <option>Uttarakhand</option>
-                                <option>Uttar Pradesh</option>
-                                <option>West Bengal</option>
-                                <option>Andaman and Nicobar</option>
-                                <option>Jammu & Kashmir</option>
-                                <option>Ladakh</option>
-                                <option>Lakshadweep</option>
-                                <option>Chandigarh</option>
-                                <option>Dadra</option>
-                                <option>Delhi</option>
-                                <option>Puducherry</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="email">email address </label>
-                        </td>
-                        <td colspan="3">
-                            <input type="email" id="email" class="emaili">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="pass">create Password</label>
-                        </td>
-                        <td colspan="3">
-                            <input type="password" id="pass" class="int" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="cp">Confirm password</label>
-                        </td>
-                        <td colspan="3">
-                            <div class="eye">
-                            <input type="password" id="cp" class="con" required/><img src="img/bulbo.png" alt="show" class="imgb" onclick="show()">
+        <form name="myform" method="post" id="register" onsubmit="return validateform()">
+            <table>
+                <tr>
+                    <th colspan="4">Sign up</th>
+                </tr>
+        
+                <tr>
+                    <td colspan="4" class="span"><span id="formerror"></span></td>
+                </tr>
+        
+                <tr>
+                    <td><label for="fname">full Name:</label></td>
+                    <td colspan="3"><input type="text" id="fname" class="int" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="gen">Gender:</label></td>
+                    <td>
+                        <input type="radio" id="male" value="male" name="a" class="radio" required />
+                        <label for="male">male</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="female" value="female" name="a" class="radio" required />
+                        <label for="female">female</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="special" value="others" name="a" class="radio" required />
+                        <label for="special">others</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="con">Contact no.</label>
+                    </td>
+                    <td colspan="3">
+                        <input type="tel" id="con" class="int" maxlength="10" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address:</label></td>
+                    <td colspan="3"><input type="text" id="address" class="int" required /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="state">State:</label>
+                    </td>
+                    <td colspan="3">
+                        <select id="state" class="state">
+                            <option value="state">state</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="TJharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="West Bengal">West Bengal</option>
+                            <option value="Andaman and Nicobar">Andaman and Nicobar</option>
+                            <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+                            <option value="Ladakh">Ladakh</option>
+                            <option value="Lakshadweep">Lakshadweep</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Dadra">Dadra</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Puducherry">Puducherry</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">email address </label>
+                    </td>
+                    <td colspan="3">
+                        <input type="email" id="email" class="emaili">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pass">create Password</label>
+                    </td>
+                    <td colspan="3">
+                        <input type="password" id="pass" class="int" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="cp">Confirm password</label>
+                    </td>
+                    <td colspan="3">
+                        <div class="eye">
+                            <input type="password" id="cp" class="con" required /><img src="img/bulbo.png" alt="show"
+                                class="imgb" onclick="show()">
                             <!-- <input type="button" value="Show" class="sh" id="s" onclick="show()"> -->
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4" id="res">
-                            <button type="submit" class="btn" >Submit</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4" id="sub">
-                            <button type="reset" class="btn" >reset</button>
-                        </td>
-                    </tr>
-                </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" id="res">
+                        <button type="submit" class="btn">Submit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" id="sub">
+                        <button type="reset" class="btn">reset</button>
+                    </td>
+                </tr>
+            </table>
         </form>
     </div>
-    <script src="signup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDjD9ty2oA2dvZfXRN1SArAA08dCy9GPhw",
+            authDomain: "dinerosr-8119d.firebaseapp.com",
+            databaseURL: "https://dinerosr-8119d-default-rtdb.firebaseio.com",
+            projectId: "dinerosr-8119d",
+            storageBucket: "dinerosr-8119d.appspot.com",
+            messagingSenderId: "164147652103",
+            appId: "1:164147652103:web:a86c8a8605fda60432aca2"
+        };
+        firebase.initializeApp(firebaseConfig);
+        var messagesRef = firebase.database().ref('register form');
+        var i = 0;
+        var selectElement = document.getElementById('state');
+        selectElement.addEventListener('change', function () {
+
+            if (selectElement.value === 'state' || i === 0) {
+                selectElement.remove(0);
+                i++;
+            }
+        });
+        function validateform() {
+            var con = document.forms["myform"]["con"].value;
+            var em = document.forms["myform"]["email"].value;
+            var pass = document.forms["myform"]["pass"].value;
+            var cp = document.forms["myform"]["cp"].value;
+            var st = document.forms["myform"]["state"].value;
+            var error = pass.localeCompare(cp);
+            if (st === 'state') {
+                document.getElementById("formerror").innerHTML = "* Select the state you belong to";
+                return false;
+            }
+            if (con.length < 10) {
+                document.getElementById("formerror").innerHTML = "* The length of contact no. should be 10 digit";
+                return false;
+            }
+            if(em.length<5){
+                document.getElementById("formerror").innerHTML= "* The length of email address should be more than 5 digit";
+                return false;
+            }
+            if (pass.length < 10) {
+                document.getElementById("formerror").innerHTML = "* The length of password shouldn't be less than 10 digit";
+                return false;
+            }
+            if (cp.length < 10) {
+                document.getElementById("formerror").innerHTML = "* The length of confirm password shouldn't be less than 10 digit";
+                return false;
+            }
+            if (error != 0) {
+                document.getElementById("formerror").innerHTML = "* Password and confirm password are not the same.";
+                return false;
+            }
+            else {
+                // alert("SignUp successfully");
+                return true;
+            }
+        }
+        document.getElementById('register').addEventListener('submit', function (e) {
+            if (validateform()) {
+                e.preventDefault();
+                submitForm();
+            }
+        });
+
+        function submitForm(e) {
+            var fname = getInputVal('fname');
+            var gender = document.querySelector('input[name="a"]:checked').value;
+            var contact = getInputVal('con');
+            var address = getInputVal('address');
+            var state = selectElement.value;
+            var email = getInputVal('email');
+            var password = getInputVal('pass');
+            console.log(fname, gender, contact, address, state, email, password);
+            saveMessage(fname, gender, contact, address, state, email, password);
+        }
+
+        // Function to get form values
+        function getInputVal(id) {
+            return document.getElementById(id).value;
+        }
+
+        // Save message to firebase
+        function saveMessage(fname, gender, contact, address, state, email, password) {
+            var newMessageRef = messagesRef.push();
+            newMessageRef.set({
+                fname: fname,
+                gender: gender,
+                phone_no: contact,
+                address: address,
+                state: state,
+                email: email,
+                password: password,
+            });
+            window.location.href = "login.html";
+        }
+        function show() {
+            var x = document.getElementById("cp");
+            var eyeIcon = document.querySelector(".imgb");
+            if (x.type === "password") {
+                x.type = "text";
+                eyeIcon.src = "img/bulbl.png";
+                eyeIcon.style.height = '42px';
+                // document.getElementById('s').value='Hide';
+            }
+            else {
+                x.type = "password";
+                eyeIcon.src = "img/bulbo.png";
+                eyeIcon.style.height = '50px';
+                // document.getElementById('s').value='Show';
+            }
+        }
+    </script>
 </body>
+
 </html>

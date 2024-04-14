@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.3" />
+    <meta name="description" content="add page" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <title>dineroSR wallet</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="icon" type="image/icon" href="img/snas-logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script
+        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "1431902a-f17c-4925-b7bf-3bc5e3401762"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+    </script>
+    <link rel="stylesheet" href="wallet.css"> 
+</head>
+
+<body>
+    <header>
+        <h1>MY VIRTUAL WALLET</h1>
+        <nav>
+          <ul>
+            <li><a href="#add-account">Add Bank Account</a></li>
+            <li><a href="#upi-payment">Add UPI Account</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+      <section id="balance">
+        <h2>Current Balance</h2>
+        <p>&#x20B9;<strong>0.00</strong></p>
+      </section>
+      
+      <section id="transactions">
+        <h2>Recents Transaction </h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Transaction rows will be added here -->
+          </tbody>
+        </table>
+      </section>
+      
+
+      <div id="transfer">
+        <h2>Transfer Funds</h2>
+        <form id="transfer-form">
+          <!-- Transfer method dropdown -->
+          <label for="transfer-method">Transfer Method:</label>
+          <select id="transfer-method" name="transfer-method" required>
+            <option value="">Select Method</option>
+            <option value="bank">Bank Account</option>
+            <option value="upi">UPI ID</option>
+          </select>
+      
+          <!-- Account list dropdown (for bank accounts or UPI IDs) -->
+          <label for="account-list">Select Account or UPI ID:</label>
+          <select id="account-list" name="account-list">
+            <!-- Options will be populated dynamically using JavaScript -->
+          </select>
+      
+          <!-- Amount input field -->
+          <label for="amount">Amount (₹):</label>
+          <input type="number" id="amount" name="amount" required>
+      
+          <button type="submit">Transfer</button>
+        </form>
+      </div>
+      
+
+      <section id="history">
+        <h2>Transaction History</h2>
+        <!-- Transaction history table will be added here -->
+      </section>
+      
+      <section id="add-account">
+        <h2>Add Bank Account of Recipient</h2>
+        <form id="add-bank-account-form">
+          <label for="account-number">Account Number:</label>
+          <input type="text" id="account-number" name="account-number" required>
+        
+          <label for="ifsc-code">IFSC Code:</label>
+          <input type="text" id="ifsc-code" name="ifsc-code" required>
+        
+          <button type="submit">Add Account</button>
+        </form>
+        
+        
+        
+      </section>
+      
+      <section id="upi-payment">
+        <h2>Add UPI ID of Recipient</h2>
+        <form id="add-upi-id-form">
+          <label for="upi-id">UPI ID:</label>
+          <input type="text" id="upi-id" name="upi-id" required>
+        
+          <button type="submit">Add UPI ID</button>
+        </form>
+      </section>
+
+      <footer>
+        <p>MoneyManagementWallet&copy;2024</p>
+      </footer>
+     
+      <script src="wallet.js"></script>
+</body>
+
+</html>

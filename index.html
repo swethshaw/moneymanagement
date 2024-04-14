@@ -5,12 +5,230 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.3" />
     <meta name="description" content="index page" />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
-    <title>Money Management</title>
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <title>dineroSR</title>
+    <link type="text/css" rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="icon" type="image/icon" href="img/snas-logo.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script
+        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "1431902a-f17c-4925-b7bf-3bc5e3401762"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
+    <style>
+        #header {
+            background-color: #1995AD;
+            padding: 33px;
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+        }
+
+        #logoicon {
+            height: 50px;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .wall {
+            margin-right: 10px;
+            border-radius: 18px;
+            padding: 13px;
+            text-transform: uppercase;
+            background-color: white;
+            border: 5px solid blue;
+            font-weight: 600;
+            cursor: pointer;
+            color: darkgreen;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        #login {
+            display: flex;
+            justify-content: end;
+        }
+
+        .btn-sign {
+            margin-right: 10px;
+            font-size: 25px;
+            border-radius: 18px;
+            padding: 13px;
+            text-transform: uppercase;
+            background-color: white;
+            border: 5px solid blue;
+            font-weight: 600;
+            cursor: pointer;
+            color: darkgreen;
+        }
+
+        .btn-sign:hover {
+            transform: scale(1.2);
+            background-color: lightgreen;
+            border-color: aliceblue;
+            color: blue
+        }
+
+        #nav {
+            display: flex;
+            justify-content: center;
+            padding-top: 25px;
+            padding-bottom: 10px;
+            background-color: #A1D6E2;
+        }
+
+        .li {
+            list-style: none;
+            padding: 18px;
+            display: inline;
+            cursor: pointer;
+            color: white;
+            font-size: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .li:hover {
+            color: aqua;
+            background-color: blanchedalmond;
+            border-radius: 30px;
+            font-weight: 900;
+        }
+
+
+        #body {
+            background-color: beige;
+            padding: 25px;
+        }
+
+        #body-row {
+            padding: 15px;
+        }
+
+        #body-img {
+            display: flex;
+            justify-content: center;
+            padding: 21px;
+        }
+
+        .body-imag {
+            width: 350px;
+            height: 380px;
+            border: 5px solid white;
+            text-align: center;
+            padding: 25px;
+            cursor: pointer;
+            border-radius: 18px;
+            background-color: rgb(248, 184, 100);
+        }
+
+        .body-imag:hover {
+            transform: scale(1.2);
+            background-color: #E7E8D1;
+            border-color: rgb(248, 184, 100);
+            border-radius: 18px;
+        }
+
+        img {
+            border-radius: 25px;
+        }
+
+        #a {
+            padding-top: 10px;
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: black;
+        }
+
+        .icon {
+            width: 210px;
+            height: 210px;
+        }
+
+
+        .bottom {
+            background-color: lightgrey;
+            padding-top: 30px;
+
+        }
+
+        footer {
+            padding: 15px;
+        }
+
+        li {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        .info p {
+            font-size: 25px;
+        }
+
+        #fa {
+            font-size: 25px;
+            padding: 8px;
+            border: 2px solid white;
+            background-color: floralwhite;
+            color: black;
+            border-radius: 18px;
+            margin-left: 8px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            text-transform: capitalize;
+            font-size: 30px;
+            padding-bottom: 10px;
+        }
+
+        .copyright {
+            font-size: 25px;
+        }
+
+        .ul {
+            display: inline;
+            cursor: pointer;
+            padding: 20px;
+            font-size: 25px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        #about {
+            padding: 2px;
+            font-size: 25px;
+        }
+
+        #bot {
+            padding-top: 18px;
+        }
+
+        .text {
+            font-size: 22px;
+        }
+
+        .abo {
+            font-size: 22px;
+            text-transform: capitalize;
+            margin-left: 20px;
+            color: black;
+            cursor: pointer;
+            position: absolute;
+            margin-top: 10px;
+        }
+
+        .terms {
+            display: flex;
+            justify-content: end;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -23,11 +241,11 @@
                 <!-- <input type="search" placeholder="search" class="search" id="sch"/> -->
             </div>
             <div class="col-5" id="login">
-                <a href="./payment/wallet.html"><input type="button" value="+0.0" class="wall"></a>
-                <a href="./login/register.html">
+                <a href="wallet.html"><input type="button" value="+0.0" class="wall"></a>
+                <a href="register.html">
                     <button type="button" class="btn-sign">sign up</button>
                 </a>
-                <a href="./login/login.html">
+                <a href="login.html">
                     <button type="button" class="btn-sign">sign in</button>
                 </a>
             </div>
@@ -43,16 +261,16 @@
                 <a href="#bottom">
                     <li class="li">ABOUT US</li>
                 </a>
-                <a href="./addbill/add.html">
+                <a href="add.html">
                     <li class="li">ADD BILL</li>
                 </a>
-                <a href="./viewbill/view.html">
+                <a href="view.html">
                     <li class="li">VIEW BILLS</li>
                 </a>
-                <a href="./payment/payment.html">
+                <a href="payment.html">
                     <li class="li">MAKE PAYMENT</li>
                 </a>
-                <a href="./notification/notification.html">
+                <a href="notification.html">
                     <li class="li">NOTIFICATIONS</li>
                 </a>
             </ul>
@@ -62,7 +280,7 @@
     <div class="container-fluid" id="body">
         <div class="row" id="body-row">
             <div class="col-4" id="body-img">
-                <a href="./addbill/add.html">
+                <a href="add.html">
                     <div class="body-imag">
                         <img src="img/add.png" class="icon" alt="add image" id="add" />
                         <label for="add" id="a">Add Bill</label>
@@ -70,7 +288,7 @@
                 </a>
             </div>
             <div class="col-4" id="body-img">
-                <a href="./viewbill/view.html">
+                <a href="view.html">
                     <div class="body-imag">
                         <img src="img/view.png" class="icon" alt="view image" id="view" />
                         <label for="view" id="a">View Bills</label>
@@ -78,7 +296,7 @@
                 </a>
             </div>
             <div class="col-4" id="body-img">
-                <a href="./phone/phone.html">
+                <a href="phone.html">
                     <div class="body-imag">
                         <img src="img/pay.png" class="icon" alt="pay image" id="mobilerec" />
                         <label for="mobilerec" id="a">Mobile Recharge</label>
@@ -88,7 +306,7 @@
         </div>
         <div class="row" id="body-row">
             <div class="col-4" id="body-img">
-                <a href="./payment/payment.html">
+                <a href="payment.html">
                     <div class="body-imag">
                         <img src="img/payment.png" class="icon" alt="pay image" id="payment" />
                         <label for="payment" id="a">Make payment</label>
@@ -96,7 +314,7 @@
                 </a>
             </div>
             <div class="col-4" id="body-img">
-                <a href="./payment/wallet.html">
+                <a href="wallet.html">
                     <div class="body-imag">
                         <img src="img/wallet.png" class="icon" alt="wallet image" id="wallet" />
                         <label for="wallet" id="a">wallet</label>
@@ -104,7 +322,7 @@
                 </a>
             </div>
             <div class="col-4" id="body-img">
-                <a href="./notification/notification.html">
+                <a href="notification.html">
                     <div class="body-imag">
                         <img src="img/images.png" class="icon" alt="pay image" id="notification" />
                         <label for="notification" id="a">Notification</label>
@@ -114,7 +332,7 @@
         </div>
         <div class="row" id="body-row">
             <div class="col-4" id="body-img">
-                <a href="./profile/profile.html">
+                <a href="profile.html">
                     <div class="body-imag">
                         <img src="img/acc.png" class="icon" alt="account image" id="profile" />
                         <label for="profile" id="a">My Account</label>
@@ -122,7 +340,7 @@
                 </a>
             </div>
             <div class="col-4" id="body-img">
-                <a href="./lander/lander.html">
+                <a href="lander.html">
                     <div class="body-imag">
                         <img src="img/len.png" class="icon" alt="pay image" id="lender" />
                         <label for="lender" id="a">change lander</label>
@@ -130,7 +348,7 @@
                 </a>
             </div>
             <div class="col-4" id="body-img">
-                <a href="./feedback/feedback.html">
+                <a href="feedback.html">
                     <div class="body-imag">
                         <img src="img/com.png" class="icon" alt="feedback image" id="feed" />
                         <label for="feed" id="a">Feedback</label>
@@ -154,17 +372,19 @@
                         </p>
                     </div>
                     <div class="footer-img">
-                        <a href="https://wa.me/9366050184"><i class="fa fa-whatsapp" id="fa" aria-hidden="true"></i></a>
+                        <a href="https://wa.me/9366050184" target="_blank"><i class="fa fa-whatsapp" id="fa"
+                                aria-hidden="true"></i></a>
                         <a href="https://www.facebook.com/"><i class="fa fa-facebook" id="fa"
                                 aria-hidden="true"></i></a>
-                        <a href="https://telegram.org/"><i class="fa fa-telegram" id="fa" aria-hidden="true"></i></a>
+                        <a href="https://telegram.org/" target="_blank"><i class="fa fa-telegram" id="fa"
+                                aria-hidden="true"></i></a>
                         <a href="https://www.instagram.com/"><i class="fa fa-instagram" id="fa"
                                 aria-hidden="true"></i></a>
-                        <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" id="fa"
+                        <a href="https://twitter.com/?lang=en" target="_blank"><i class="fa fa-twitter" id="fa"
                                 aria-hidden="true"></i></a>
-                        <a href="https://www.youtube.com/"><i class="fa fa-youtube-play" id="fa"
+                        <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" id="fa"
                                 aria-hidden="true"></i></a>
-                        <a href="https://in.linkedin.com/"><i class="fa fa-linkedin-square" id="fa"
+                        <a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin-square" id="fa"
                                 aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -197,21 +417,21 @@
             <div class="row" id="bot">
                 <div class="col-4">
                     <div class="copyright">
-                        <span>&copy</span><span> 2024 SNAS, Inc. All rights reserved.</span>
+                        <span>&copy</span><span> 2024 SNAS & RMC, Inc. All rights reserved.</span>
                     </div>
                 </div>
                 <div class="col-8">
                     <ul class="terms">
-                        <a href="./term/term.html">
+                        <a href="term.html">
                             <li class="ul">Terms & Conditions</li>
                         </a>
-                        <a href="./term/term.html">
+                        <a href="term.html">
                             <li class="ul">Privacy Policy</li>
                         </a>
-                        <a href="./term/term.html">
+                        <a href="term.html">
                             <li class="ul">Lending T&C</li>
                         </a>
-                        <a href="./term/term.html">
+                        <a href="term.html">
                             <li class="ul">Grievances & Redressal</li>
                         </a>
                     </ul>
@@ -220,7 +440,6 @@
         </div>
     </footer>
 
-    <script src="index.js"></script>
 </body>
 
 </html>

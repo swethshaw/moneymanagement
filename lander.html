@@ -5,20 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.3" />
     <meta name="description" content="add page" />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
-    <title>dineroSR payment</title>
-    <link rel="icon" type="image/icon" href="img/snas-logo.png" />
+    <title>dineroSR invoice</title>
+    <link rel="stylesheet" href="" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="icon" type="image/icon" href="img/snas-logo.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
     <script
         type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "1431902a-f17c-4925-b7bf-3bc5e3401762"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
 </head>
 
 <body>
-    <div class="logo">
-        <a href="index.html"><img src="img/snas-logo.png" alt="no image" id="logoicon"></a>
-    </div>
-    <script></script>
+    <h1>Submit Data to Node.js</h1>
+    <form action="/submit" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
 </body>
 
 </html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User profile page">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <title>dineroSR Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" type="image/icon" href="../img/snas-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        #logoicon {
+            height: 35px;
+            cursor: pointer;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e6f7ff;
+            /* color: #333333; */
+            /* padding: 0; */
+            /* align-items: center;
+            height: 100vh; */
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 30px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #ffffff;
+        }
+
+        .profile-details {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-details h2 {
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .profile-details p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #5cb85c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+
+        #profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 3px solid #C0C0C0;
+            background-color: #e6e6e6;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: #333333;
+            cursor: pointer;
+            position: relative;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        #profile-picture:after {
+            content: 'No Image';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333333;
+            font-size: 1em;
+            pointer-events: none;
+        }
+
+        input[type="text"],
+        input[type="file"] {
+            display: block;
+            margin: 10px auto;
+            padding: 5px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+        }
+
+        select,
+        input[type="text"],
+        input[type="file"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        select{
+            color: black;
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #genderInput,#state{
+            width: 100%;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: #ffffff;
+            border: 1px solid #007bff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <a href="index.html"><img src="img/snas-logo.png" alt="no image" id="logoicon"></a>
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="profile-details">
+                <img id="profile-picture" class="No Image"
+                    onclick="document.getElementById('hidden-image-upload').click();">
+                <input type="file" id="hidden-image-upload" accept=".png, .jpg, .jpeg" style="display: none;" disabled/>
+                <p>Name: <input type="text" id="nameInput" value="" disabled/></p>
+                <p>Phone: <input type="text" id="phoneInput" value="" disabled/></p>
+                <p>Address: <input type="text" id="addressInput" value="" disabled/></p>
+                <p>State: <select id="state" class="state" disabled>
+                    <option value="state">state</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="TJharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="West Bengal">West Bengal</option>
+                    <option value="Andaman and Nicobar">Andaman and Nicobar</option>
+                    <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+                    <option value="Ladakh">Ladakh</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Dadra">Dadra</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Puducherry">Puducherry</option>
+                </select></p>
+                <p>Email: <input type="text" id="emailInput" value="" disabled/></p>
+                <p>Gender:<select id="genderInput" style="display: block; margin: auto;" disabled>
+                        <option value="gender">Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="others">Others</option>
+                    </select></p>
+                <button id="submit" onclick="saveProfile()" disabled>Save Profile</button>
+                <!-- <button id="edit" onclick="editProfile()" active>Edit Profile</button> -->
+            </div>
+        </div>
+        <div id="profilePictureModal" class="modal">
+            <span class="close">×</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
+        </div>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDjD9ty2oA2dvZfXRN1SArAA08dCy9GPhw",
+            authDomain: "dinerosr-8119d.firebaseapp.com",
+            databaseURL: "https://dinerosr-8119d-default-rtdb.firebaseio.com",
+            projectId: "dinerosr-8119d",
+            storageBucket: "dinerosr-8119d.appspot.com",
+            messagingSenderId: "164147652103",
+            appId: "1:164147652103:web:a86c8a8605fda60432aca2"
+        };
+        firebase.initializeApp(firebaseConfig);
+        var database = firebase.database().ref('register form');
+        database.once('value', function(snapshot){
+            if(snapshot.exists()){
+            var content = '';
+            snapshot.forEach(function(data){
+                var val = data.val();
+                document.getElementById('nameInput').value = val.fname;
+                document.getElementById('phoneInput').value = val.phone_no;
+                document.getElementById('addressInput').value = val.address;
+                document.getElementById('state').value = val.state;
+                document.getElementById('emailInput').value = val.email;
+                document.getElementById('genderInput').value = val.gender;
+            });
+        };
+    });
+
+        var i = 0;
+        var selectElement = document.getElementById('genderInput');
+        selectElement.addEventListener('change', function () {
+
+            if (!selectElement.value === 'gender' || i === 0) {
+                selectElement.remove(0);
+                i++;
+            }
+        });
+        var j = 0;
+        var selectElement = document.getElementById('state');
+        selectElement.addEventListener('change', function () {
+
+            if (!selectElement.value === 'state' || j === 0) {
+                selectElement.remove(0);
+                j++;
+            }
+        });
+        function saveProfile() {
+            try {
+                // const userDetails = {
+                //     picture: document.getElementById('profile-picture').src,
+                //     name: document.getElementById('nameInput').value,
+                //     phone: document.getElementById('phoneInput').value,
+                //     address: document.getElementById('addressInput').value,
+                //     state: document.getElementById('stateInput').value,
+                //     email: document.getElementById('emailInput').value,
+                //     gender: document.getElementById('genderInput').value
+                // };
+
+                document.getElementById('nameInput').disabled = true;
+                document.getElementById('phoneInput').disabled = true;
+                document.getElementById('addressInput').disabled = true;
+                document.getElementById('state').disabled = true;
+                document.getElementById('emailInput').disabled = true;
+                document.getElementById('genderInput').disabled = true;
+                document.getElementById('submit').disabled = true;
+                document.getElementById('hidden-image-upload').disabled = true;
+
+                document.getElementById('profile-picture').style.cursor = 'pointer';
+                document.getElementById('profile-picture').onclick = function () {
+                    var modal = document.getElementById('profilePictureModal');
+                    var modalImg = document.getElementById('modalImage');
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                };
+                var oldInput = document.getElementById('hidden-image-upload');
+                var newInput = oldInput.cloneNode(true);
+                oldInput.parentNode.replaceChild(newInput, oldInput);
+            } catch (e) {
+                if (e instanceof DOMException && e.code === DOMException.QUOTA_EXCEEDED_ERR) {
+                    alert('Failed to save profile: Image size exceeded storage limit');
+                } else {
+                    console.error('An unexpected error occurred:', e);
+                }
+            }
+        }
+
+        // function editProfile() {
+        //     document.getElementById('nameInput').disabled = false;
+        //     document.getElementById('addressInput').disabled = false;
+        //     document.getElementById('state').disabled = false;
+        //     document.getElementById('genderInput').disabled = false;
+        //     document.getElementById('submit').disabled = false;
+        //     document.getElementById('edit').disabled = true;
+        //     document.getElementById('hidden-image-upload').disabled = false;
+        //     document.getElementById('hidden-image-upload').addEventListener('change', function (event) {
+        //         const reader = new FileReader();
+        //         reader.onload = function (e) {
+        //             document.getElementById('profile-picture').src = e.target.result;
+        //             document.getElementById('profile-picture').style.backgroundImage = 'none';
+        //         };
+        //         reader.readAsDataURL(event.target.files[0]);
+        //     });
+        //     document.getElementById('profile-picture').onclick = function () {
+        //     document.getElementById('hidden-image-upload').click();
+        //     };
+        // }
+
+
+        var modal = document.getElementById('profilePictureModal');
+        var img = document.getElementById('profile-picture');
+        var modalImg = document.getElementById('modalImage');
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+    </script>
+</body>
+
+</html>
